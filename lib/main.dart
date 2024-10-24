@@ -52,16 +52,80 @@ class _MenuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: ButtonBar(
-          children: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.chevron_left))
-          ],
-        ),
         title: Text('Joki Murah Terpercaya',
         style: TextStyle(
           fontWeight: FontWeight.bold
-        ),),
+        ),
+      ),
         centerTitle: true,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage('assets/1.jpeg'),
+                  ),
+                  SizedBox(height: 10,),
+                  Text(
+                    'Joki Terpercaya',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'Fast to Joki',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.military_tech),
+              title: Text('Height Tier'),
+              onTap: () {
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.speed),
+              title: Text('Fast Proyek'),
+              onTap: () {
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.contact_phone),
+              title: Text('Contact Us'),
+              onTap: () {
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Logout'),
+              onTap: () {
+              },
+            ),
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -104,7 +168,7 @@ class _MenuPage extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: Row(
                 children: [
-                  SizedBox(width: 10,),
+                  SizedBox(width: 5,),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(1000),
                     child: Image.asset(
@@ -113,15 +177,25 @@ class _MenuPage extends StatelessWidget {
                       height: 25,
                     ),
                   ),
-                  SizedBox(width: 20,),
+                  SizedBox(width: 10,),
                   Text(
-                    'Glarr Store',
+                    'Glarr Store Ori',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 15,
                     ),
-                  )
+                  ),
+                  SizedBox(width: 10,),
+                  CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      radius: 7,
+                      child: Icon(
+                        Icons.check,
+                        size: 10,
+                      ),
+                      )
                 ],
               ),
             ),
@@ -215,7 +289,7 @@ class _MenuPage extends StatelessWidget {
                         ),
                     )
                   ],
-                )
+                ),
               ],
             ),
           )
